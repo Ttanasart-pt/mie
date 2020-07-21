@@ -1,0 +1,24 @@
+{
+    "mines":[
+        {
+            "name":"Greenhorse",
+            "location":"Range mt.",
+            "yield":[
+                { "oreType": "eron", "yield": 1 },
+                { "oreType": "ignetium", "yield": 2 }
+            ],
+            "capacity": 300,
+            "cycle": 12
+        },
+        {
+            "name":"Abandoned",
+            "location":"Ludwigh site",
+            "yield":[
+                { "oreType": "eron", "yield": 1 },
+                { "oreType": "ignetium", "yield": 2 }
+            ],
+            "capacity": 300,
+            "cycle": 12
+        }
+    ]
+}

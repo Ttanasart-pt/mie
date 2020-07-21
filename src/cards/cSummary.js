@@ -7,10 +7,7 @@ import './card.css';
 class CardSummary extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            header: "Summary",
-        };
-
+        
         setInterval(() => {
             this.setState(() => ({}));
         }, 1000);
@@ -46,7 +43,7 @@ class CardSummary extends React.Component{
         };
         return(
             <div className="card">
-                <h2 className="card-title">{this.state.header}</h2>
+                <h2 className="card-title">Summary</h2>
                 <div className="card-content" style={sumCard}>
                     <div style={sumPie}>
                         <PieChart data={this.oreStorage} lineWidth="50" rounded="true" 

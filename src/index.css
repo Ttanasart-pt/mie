@@ -8,4 +8,6 @@ body{
     margin: 0px;
 
     background-color: #202020;
+    background-image: url("./img/bg_pix.png");
+    background-repeat: repeat;
 }

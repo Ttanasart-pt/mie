@@ -15,7 +15,7 @@
     box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.15);
 }
 
-.sidebar div{
+.sidebar a{
     width: 100%;
     height: 60px;
 
@@ -30,18 +30,21 @@
 
     transition: background-color 0.2s ease;
 }
-.sidebar div:hover{
+.sidebar a:hover{
+    background-color: rgba(255, 255, 255, .1);
+}
+.sidebar .active{
     background-color: rgba(255, 255, 255, .1);
 }
 
-.sidebar div:first-child{
+.sidebar a:first-child{
     margin: 20px 0px 0px 0px;
 }
-.sidebar div:last-child{
+.sidebar a:last-child{
     margin: auto 0px 20px 0px;
 }
 
-.sidebar div img{
+.sidebar a img{
     width: 25px;
     height: 25px;
 }

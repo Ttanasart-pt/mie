@@ -6,15 +6,12 @@ import CardContract from './cContract.js';
 class CardContracts extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            header: "Contracts",
-        }
     }
 
     render(){
         return(
             <div className="card gr2">
-                <h2 className="card-title">{this.state.header}</h2>
+                <h2 className="card-title">Contracts</h2>
                 <div className="card-content-list">
                     {
                         data.contracts.map((contract) => 

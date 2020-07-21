@@ -1,9 +1,14 @@
 import React from 'react';
+import { Route, NavLink, HashRouter } from 'react-router-dom';
+
+import PlayerData from './data/playerData';
+
+import Sidebar from './pages/sidebar';
+import Dashboard from './pages/dashboard';
+import Mines from "./pages/mines";
+
 import './App.css';
 import './base.css';
-import Sidebar from './fragment/sidebar';
-import Dashboard from './fragment/dashboard';
-import PlayerData from './data/playerData';
 
 function App() {
     setInterval(() => {
@@ -12,9 +17,12 @@ function App() {
 
     return (
         <div className="App">
-            <div className="content">
-                <Dashboard/>
-            </div>
+            <HashRouter>
+                <div className="content">
+                    <Route exact path="/" component={Dashboard}/>
+                    <Route path="/mines" component={Mines}/>
+                </div>
+            </HashRouter>
             <Sidebar />
         </div>
     );

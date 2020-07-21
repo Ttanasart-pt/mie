@@ -1,9 +1,12 @@
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
+
 import data from '../data/playerData.json';
+
 import icon_stop from '../svg/stop.svg';
 import icon_play from '../svg/play.svg';
 import icon_cont from '../svg/contracts.svg';
+
 import './card.css';
 
 class CardMine extends React.Component{

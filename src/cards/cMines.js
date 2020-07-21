@@ -1,17 +1,16 @@
 import React from 'react';
+
 import data from '../data/playerData.json';
 import oreData from '../data/oreData.json';
-import './card.css';
 
 import icon_cart from '../svg/minecart.svg';
 import CardMine from './cMine';
 
+import './card.css';
+
 class CardMines extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            header: "Mines",
-        }
         setInterval(() => {
             this.setState(() => ({}));
         }, 1000);
@@ -33,11 +32,11 @@ class CardMines extends React.Component{
         this.getMineStorage();
         return(
             <div className="card gr3">
-                <h2 className="card-title">{this.state.header}</h2>
+                <h2 className="card-title">Mines</h2>
                 <div className="card-content-list">
-                    {this.mineStorage.map((mine) => 
-                        <CardMine mine={mine} />
-                    )}
+                    {
+                        this.mineStorage.map((mine) => <CardMine mine={mine} />)
+                    }
                 </div>
                 <div className="card-option">
                     <div className="card-icon" style={{"background-color":"#cccccc"}}><img src={icon_cart}/></div>
