@@ -1,0 +1,36 @@
+{
+    "playerName": "Guest",
+    "money": 500,
+    "sessionStep": 0,
+
+    "mines":[
+        {
+            "name": "bluehorse",
+            "location": "bluehorse valley",
+            "yields":[
+                { "oreType": "eron", "yield": 30 },
+                { "oreType": "ignetium", "yield": 10 }
+            ],
+            "capacity": 500,
+            "storage":[
+                { "oreType": "eron", "yield": 150 },
+                { "oreType": "ignetium", "yield": 50 }
+            ],
+            "cycle": 10
+        },
+        {
+            "name": "skyfield",
+            "location": "panamite river",
+            "yields":[
+                { "oreType": "eron", "yield": 20 },
+                { "oreType": "ignetium", "yield": 10 }
+            ],
+            "capacity": 300,
+            "storage":[
+                { "oreType": "eron", "yield": 50 },
+                { "oreType": "ignetium", "yield": 25 }
+            ],
+            "cycle": 6
+        }
+    ]
+}

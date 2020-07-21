@@ -1,0 +1,255 @@
+p{
+    color: #999999;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #303030;
+    border-radius: 0px 20px 20px 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gc2{
+    grid-column: span 2 / auto;
+}
+.gr2{
+    grid-row: span 2 / auto;
+}
+.gr3{
+    grid-row: span 3 / auto;
+}
+
+.card-title{
+    color: #999999;
+    margin: 0px;
+}
+
+.card-content{
+    margin: 20px 0px 10px 0px;
+    display: flex;
+    overflow-y: hidden;
+}
+.card-content-list{
+    height: auto;
+    margin: 20px 0px 10px 0px;
+    display: block;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+.card-mine{
+    position: relative;
+    margin: 0px 0px 20px 0px;
+    padding: 10px;
+    height: 130px;
+
+    background-color: #383838;
+    border-radius: 0px 10px 10px 10px;
+
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+
+    transition: background-color, box-shadow 0.2s ease;
+}
+.card-mine:hover{
+    background-color: #404040;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-mine h3{
+    margin: 0px;
+    padding: 0px;
+
+    color: #999999;
+}
+
+.option-bar{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    top: 8px;
+    right: 8px;
+}
+.option-bar .option{
+    padding: 0px 8px;
+    margin-bottom: 8px;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: 32px;
+    background-color: #282828;
+    border-radius: 16px;
+}
+.option .button{
+    opacity: 0.5;
+    padding: 6px 8px 8px 8px;
+
+    width: 16px;
+    height: 16px;
+
+    transition: opacity 0.2s ease;
+}
+.option .button:hover{
+    opacity: 1.0;
+}
+
+.card-ore-data{
+    margin: 5px 0px 10px 0px;
+    padding: 0px;
+    width: 100%;
+    height: 45px;
+
+    background-color: #404040;
+    border-radius: 0px 16px 16px 16px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    align-items: center;
+
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card-ore-data p{
+    margin: 0px 20px;
+    padding: 0px;
+
+    text-align: center;
+}
+
+.card-ore-data p:first-child{
+    font-weight: 700;
+}
+.card-ore-data p:nth-child(2){
+    font-size: 24px;
+    font-weight: 700;
+
+    background-color: #303030;
+    border-radius: 20px;
+}
+
+.card-option{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 30px 3fr;
+    top: 30px;
+    right: 30px;
+    align-items: center;
+    padding: 0px;
+
+    width: 100px;
+    height: 30px;
+    background-color: #404040;
+    border-radius: 16px;
+}
+
+.card-option h3{
+    color: #bbbbbb;
+    padding: 0px 20px 0px 0px;
+    margin: 0;
+
+    text-align: right;
+}
+
+.card-icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    background-color: #FBB040;
+    border-radius: 16px;
+}
+.card-option img{
+    padding: 0px 6px;
+    width: 18px;
+    height: 18px;
+
+    filter: saturate(0%) brightness(20%);
+}
+
+.card-contract{
+    position: relative;
+    margin: 0px 0px 12px 0px;
+    padding: 10px;
+    height: 30px;
+
+    background-color: #383838;
+    border-radius: 0px 16px 16px 16px;
+
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+
+    transition: background-color, box-shadow 0.2s ease;
+}
+.card-contract:hover{
+    background-color: #404040;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contract-icon{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 50px;
+    border-radius: 0px 16px 16px 16px;
+    background-color: #FBB040;
+}
+
+.contract-icon img{
+    width: 28px;
+    height: 28px;
+    padding: 0px 15px;
+
+    filter: saturate(0%) brightness(24%);
+}
+
+.card-contract h3{
+    margin: 0;
+    padding: 2px 0px 0px 70px;
+    align-items: center;
+
+    color: #999999;
+}
+
+.contract-reward{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    width: 120px;
+    height: 50px;
+    border-radius: 0px 16px 16px 16px;
+    background-color: #404040;
+
+    transition: background-color 0.2s ease;
+}
+
+.contract-reward h3{
+    margin: 0;
+    padding: 0px;
+    align-items: center;
+
+    color: #FBB040;
+    font-size: 22px;
+
+    transition: color 0.2s ease;
+}
+
+.card-contract:hover .contract-reward{
+    background-color: #FBB040;
+}
+.card-contract:hover .contract-reward h3{
+    color: #404040;
+}

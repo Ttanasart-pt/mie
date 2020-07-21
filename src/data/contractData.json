@@ -1,0 +1,20 @@
+{
+    "contracts":[
+        {
+            "name": "Eron cutlery",
+            "icon": "cutlery.svg",
+            "ore":[
+                { "oreType": "eron", "yield": 100 }
+            ],
+            "reward": 1000
+        },
+        {
+            "name": "Eron ruler factory",
+            "icon": "ruler.svg",
+            "ore":[
+                { "oreType": "eron", "yield": 50 }
+            ],
+            "reward": 800
+        }
+    ]
+}

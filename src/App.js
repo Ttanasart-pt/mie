@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './base.css';
+import Sidebar from './fragment/sidebar';
+import Dashboard from './fragment/dashboard';
+import data from './data/playerData.json';
+import PlayerData from './data/playerData';
 
 function App() {
+  setInterval(() => {
+    PlayerData.update();
+  }, 1000);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="content">
+        <Dashboard/>
+      </div>
+      <Sidebar />
     </div>
   );
 }
