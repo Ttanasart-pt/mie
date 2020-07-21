@@ -4,9 +4,10 @@
             "name": "Eron cutlery",
             "icon": "cutlery.svg",
             "ore":[
-                { "oreType": "eron", "yield": 100 }
+                { "oreType": "eron", "yield": 100 },
+                { "oreType": "ignetium", "yield": 50 }
             ],
-            "reward": 1000
+            "reward": 1250
         },
         {
             "name": "Eron ruler factory",

@@ -1,4 +1,5 @@
 import data from '../data/playerData.json';
+import conData from '../data/contractData.json';
 
 class PlayerData{
     static update(){
@@ -35,6 +36,17 @@ class PlayerData{
             });
         });
         return i;
+    }
+
+    static contractComplete(name){
+        var toPop;
+        conData.contracts.forEach(con => {
+            if(con.name == name){
+                data.money += con.reward;
+                toPop = con;
+            }
+        });
+        conData.contracts.pop(toPop);
     }
 }
 

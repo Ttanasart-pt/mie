@@ -1,7 +1,8 @@
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
-import './card.css';
 import PlayerData from '../data/playerData';
+import oreData from '../data/oreData.json';
+import './card.css';
 
 class CardSummary extends React.Component{
     constructor(props){
@@ -15,13 +16,10 @@ class CardSummary extends React.Component{
         }, 1000);
     }
     getOreStorage(){
-        var oreColor = [
-            {name: 'eron', color: '#C374FF'},
-            {name: 'ignetium', color: '#E24E47'}
-        ];
-        this.oreStorage = oreColor.map((ore) => 
-            ({ title: ore.name, value: PlayerData.getAllOreStore(ore.name), color: ore.color})
-        );
+        this.oreStorage = [];
+        for (const key in oreData) {
+            this.oreStorage.push({ title: key, value: PlayerData.getAllOreStore(key), color: oreData[key].color});
+        }
         this.totalCapacity = PlayerData.getAllMinesCapacity();
     }
 

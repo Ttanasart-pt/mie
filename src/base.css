@@ -18,3 +18,20 @@ h3{
     font-weight: 700;
     font-style: normal;
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(200, 200, 200, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(200, 200, 200, 0.5);
+}

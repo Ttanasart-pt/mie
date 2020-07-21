@@ -7,6 +7,14 @@ import icon_coin from '../svg/coin.svg';
 import './screen.css';
 
 class Dashboard extends React.Component{
+    constructor(props){
+        super(props);
+
+        setInterval(() => {
+            this.setState(() => ({}));
+        }, 1000);
+    }
+
     render(){
         return(
             <div className="screen">

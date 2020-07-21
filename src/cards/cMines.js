@@ -1,6 +1,7 @@
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 import data from '../data/playerData.json';
+import oreData from '../data/oreData.json';
 import './card.css';
 
 import icon_stop from '../svg/stop.svg';
@@ -20,16 +21,12 @@ class CardMines extends React.Component{
         }, 1000);
     }
     getMineStorage(){
-        var oreColor = {
-            'eron': '#C374FF',
-            'ignetium': '#E24E47'
-        };
         this.mineStorage = data.mines.map((mine) => ({
             name : mine.name,
             location : mine.location,
             capacity : mine.capacity,
             ore : mine.storage.map((_ore) => ({ 
-                title: _ore.oreType, value: _ore.yield, color: oreColor[_ore.oreType]
+                title: _ore.oreType, value: _ore.yield, color: oreData[_ore.oreType].color
             }))
         }));
         this.mineCount = data.mines.length;

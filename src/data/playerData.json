@@ -8,8 +8,8 @@
             "name": "bluehorse",
             "location": "bluehorse valley",
             "yields":[
-                { "oreType": "eron", "yield": 30 },
-                { "oreType": "ignetium", "yield": 10 }
+                { "oreType": "eron", "yield": 3 },
+                { "oreType": "ignetium", "yield": 1 }
             ],
             "capacity": 500,
             "storage":[
@@ -22,8 +22,8 @@
             "name": "skyfield",
             "location": "panamite river",
             "yields":[
-                { "oreType": "eron", "yield": 20 },
-                { "oreType": "ignetium", "yield": 10 }
+                { "oreType": "eron", "yield": 2 },
+                { "oreType": "ignetium", "yield": 1 }
             ],
             "capacity": 300,
             "storage":[

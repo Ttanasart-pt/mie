@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../data/contractData.json';
 import './card.css';
-import cardContract from './cContract.js';
+import CardContract from './cContract.js';
 
 class CardContracts extends React.Component{
     constructor(props){
@@ -18,7 +18,7 @@ class CardContracts extends React.Component{
                 <div className="card-content-list">
                     {
                         data.contracts.map((contract) => 
-                            <cardContract name={contract.name} icon={contract.icon} reward={contract.reward}/>
+                            <CardContract name={contract.name} icon={contract.icon} reward={contract.reward} ore={contract.ore}/>
                         )
                     }
                 </div>

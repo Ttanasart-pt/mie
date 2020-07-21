@@ -186,11 +186,26 @@ p{
 
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
 
-    transition: background-color, box-shadow 0.2s ease;
+    transition: background-color, box-shadow, height 0.2s ease;
+}
+.card-contract:hover.ch1{
+    height: 85px;
+}
+.card-contract:hover.ch2{
+    height: 120px;
 }
 .card-contract:hover{
     background-color: #404040;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card-contract:hover .contract-reward{
+    background-color: #FBB040;
+}
+.card-contract:hover .contract-reward h3{
+    color: #404040;
+}
+.card-contract:hover .contract-ore{
+    display: block;
 }
 
 .contract-icon{
@@ -219,6 +234,7 @@ p{
     align-items: center;
 
     color: #999999;
+    overflow: hidden;
 }
 
 .contract-reward{
@@ -246,10 +262,9 @@ p{
 
     transition: color 0.2s ease;
 }
+.contract-ore{
+    display: none;
+    position: relative;
+    margin: 24px 10px 10px 10px;
+}
 
-.card-contract:hover .contract-reward{
-    background-color: #FBB040;
-}
-.card-contract:hover .contract-reward h3{
-    color: #404040;
-}
