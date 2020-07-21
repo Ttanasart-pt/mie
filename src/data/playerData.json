@@ -7,6 +7,7 @@
         {
             "name": "bluehorse",
             "location": "bluehorse valley",
+            "active": 1,
             "yields":[
                 { "oreType": "eron", "yield": 3 },
                 { "oreType": "ignetium", "yield": 1 }
@@ -21,6 +22,7 @@
         {
             "name": "skyfield",
             "location": "panamite river",
+            "active": 0,
             "yields":[
                 { "oreType": "eron", "yield": 2 },
                 { "oreType": "ignetium", "yield": 1 }

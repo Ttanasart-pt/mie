@@ -88,16 +88,22 @@ p{
     border-radius: 16px;
 }
 .option .button{
-    opacity: 0.5;
     padding: 6px 8px 8px 8px;
 
     width: 16px;
     height: 16px;
 
-    transition: opacity 0.2s ease;
+    transition: opacity 0.1s ease;
 }
 .option .button:hover{
     opacity: 1.0;
+}
+.button.active{
+    filter: saturate(100%);
+}
+.button.inactive{
+    opacity: 0.3;
+    filter: saturate(0%) brightness(0%);
 }
 
 .card-ore-data{

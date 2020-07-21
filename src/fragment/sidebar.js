@@ -12,7 +12,8 @@ class Sidebar extends React.Component{
             [
                 {
                     "name": "Home",
-                    "icon" : icon_home
+                    "icon" : icon_home,
+                    "screen": "dashboard"
                 },
                 {
                     "name": "Mines",

@@ -6,13 +6,13 @@ class PlayerData{
         data.sessionStep += 1;
 
         data.mines.forEach(mine => {
-            if(data.sessionStep % mine.cycle == 0){
+            if(mine.active === 1 && data.sessionStep % mine.cycle === 0){
                 mine.yields.forEach(yld => {
                     var stored = false;
                     var sto = mine.storage.reduce((sto, a) => sto.yield + a.yield);
                     var yldMin = Math.min(mine.capacity - sto, yld.yield);
                     mine.storage.forEach(sto => {
-                        if(sto.oreType == yld.oreType){
+                        if(sto.oreType === yld.oreType){
                             sto.yield += yldMin;
                             stored = true;
                         }
@@ -39,14 +39,33 @@ class PlayerData{
     }
 
     static contractComplete(name){
-        var toPop;
+        var toPop = null;
         conData.contracts.forEach(con => {
-            if(con.name == name){
-                data.money += con.reward;
-                toPop = con;
+            if(con.name === name){
+                var ready = true;
+                con.ore.forEach(o => {
+                    if(o.yield > this.getAllOreStore(o.oreType)) ready = false;
+                });
+                if(ready){
+                    con.ore.forEach(o => {
+                        var y = o.yield;
+                        data.mines.forEach(mine => {
+                            mine.storage.forEach(sto => {
+                                if(sto.oreType === o.oreType){
+                                    var red = Math.min(sto.yield, y);
+                                    sto.yield -= red;
+                                    y -= red;
+                                }
+                            });
+                        });
+                    });
+                    data.money += con.reward;
+                    toPop = con;
+                }
             }
         });
-        conData.contracts.pop(toPop);
+        if(toPop != null) 
+            conData.contracts = conData.contracts.filter((con) => con.name !== toPop.name);
     }
 }
 
